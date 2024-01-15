@@ -1,9 +1,7 @@
 package com.example.newsapp;
 
 import retrofit2.Call;
-import retrofit2.http.Body;
 import retrofit2.http.GET;
-import retrofit2.http.POST;
 import retrofit2.http.Query;
 
 public interface ApiInterface {
@@ -23,11 +21,5 @@ public interface ApiInterface {
             @Query("Category") String category,
             @Query("pageSize") int pagesize,
             @Query("apiKey") String apikey
-    );
-
-    @POST("login")
-    Call<Login> login(
-            @Query("email") String email,
-            @Query("password") String password
     );
 }
